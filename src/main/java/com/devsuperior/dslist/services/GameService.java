@@ -22,8 +22,6 @@ public class GameService {
 		return new GameDTO(gameRepository.findById(id).get());
 	}
 	 
-
-	
 	@Transactional(readOnly = true)
 	public List<GameMinDTO> findAll(){
 		List<Game> result = gameRepository.findAll();

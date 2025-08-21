@@ -7,7 +7,7 @@ import com.devsuperior.dslist.entities.Game;
 public class GameDTO {
 	private Long id;
 	private String title;
-	private Integer year;
+	private Integer gameYear;
 	private String genre;
 	private String platforms;
 	private Double score;
@@ -40,12 +40,12 @@ public class GameDTO {
 		this.title = title;
 	}
 
-	public Integer getYear() {
-		return year;
+	public Integer getGameYear() {
+		return gameYear;
 	}
 
-	public void setYear(Integer year) {
-		this.year = year;
+	public void setYear(Integer gameYear) {
+		this.gameYear = gameYear;
 	}
 
 	public String getGenre() {
