@@ -8,15 +8,17 @@ O objetivo principal foi aplicar conceitos fundamentais de desenvolvimento back-
 ---
 
 ## 🛠️ Tecnologias utilizadas
-- ☕ **Java**
+- ☕ **Java 21**
 - 🌱 **Spring Boot**
 - 🗄️ **H2 Database (banco em memória)**
 - 📡 **API REST**
 - 📦 **Maven** (gerenciamento de dependências)
+  
+## 🧭 Princípios e arquitetura do projeto
 - 🔗 **Modelo Cliente/Servidor (HTTP e JSON)**
 - 🏗️ **Spring REST**
 - 🧩 **Mapeamento Objeto-Relacional (ORM - JPA/Hibernate)**
-- 📐 **Padrão em camadas**
+- 📐 **Arquitetura em camadas**
 - 📤 **DTO (Data Transfer Object)**
 
 ---
@@ -29,13 +31,13 @@ O sistema foi organizado seguindo boas práticas de arquitetura em camadas:
 - **Services** → Regras de negócio e orquestração da lógica.  
 - **Controllers** → Pontos de entrada da API REST (expondo endpoints).  
 - **DTOs** → Objetos para transferência de dados entre as camadas.
-
+- **Projections** → serve para otimizar a consulta ao banco (menos dados carregados).
 ---
 
 ## ▶️ Como executar o projeto
 
 ### Pré-requisitos
-- **Java 17+**
+- **Java 21+**
 - **Maven**
 
 ### Passos
@@ -56,6 +58,16 @@ O sistema foi organizado seguindo boas práticas de arquitetura em camadas:
    http://localhost:8080
    ```
 
+### 🚀 Resolvendo problemas de dependência
+Caso encontre erros de dependência ao rodar o projeto, utilize os comandos Maven:
+
+```bash
+# Limpa e baixa todas as dependências novamente
+mvn clean install
+
+# Executa o projeto com Spring Boot (baixa dependências automaticamente)
+./mvnw spring-boot:run
+```
 ---
 
 ## 📖 Endpoints principais
